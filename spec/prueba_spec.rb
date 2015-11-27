@@ -96,7 +96,9 @@ end
       expect(@lista4.detect {|i| i == 0}).to eq(0)
     end
      
-    
+     it "prueba metodo max" do
+      expect(@lista5.max).to eq(6)
+    end
     
     
     
