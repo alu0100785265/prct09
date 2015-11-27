@@ -105,6 +105,15 @@ end
       expect(@lista5.min).to eq(1)
     end
     
+     
+    it "prueba metodo ordenar" do
+      expect(@lista5.sort).to eq([1,2,4,5,6])
+    end
+    
+    it "prueba metodo ordenar" do
+      expect(@lista1.sort).to eq([@periodico,@libro1,@libro2,@libro3,])
+ 
+    end
   end
 
 
