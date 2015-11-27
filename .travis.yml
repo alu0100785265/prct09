@@ -9,5 +9,5 @@ language: ruby
 - ibx-19mode
   
   - 1.9.3
-  
+script: bundle exec rspec spec  
 before_install: gem install bundler -v 1.10.6
