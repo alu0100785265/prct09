@@ -1,5 +1,5 @@
 class Bbl
-  
+  include Comparable
   attr_reader :autores, :titulo, :fecha
   
   def initialize(autores, titulo, publicacion)
@@ -10,6 +10,15 @@ class Bbl
   
  
 
+    
+    def ==(other)
+      if other.is_a?Bbl
+        @autores == other.autores
+      else
+        false
+      end
+    end 
+    end
   class Libro < Bbl
     attr_accessor :editorial, :serie, :edicion, :numero_ISBN
     def initialize(autores, titulo, editorial, serie, edicion, publicacion, isbn)
