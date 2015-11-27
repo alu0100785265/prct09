@@ -79,6 +79,12 @@ end
 
   describe "Prueba Enumerable" do 
    
-   
- end
+    it "prueba metodo count" do
+      expect(@lista3.count).to eq(1)
+    end
+    
+    
+  end
+
+
 end
