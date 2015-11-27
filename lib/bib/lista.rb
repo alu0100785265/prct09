@@ -30,12 +30,12 @@ class Lista
          else
              return nil
          end
-     end
+    end
     
     def to_s()
         var_ini = @cabeza
         while(empty() != true) do
-            "#{var_ini.value}"
+            puts"#{var_ini.value}"
             var_ini = var_ini.next
             if(var_ini == nil)
                 break
@@ -123,7 +123,7 @@ class Lista
                 
                 yield nil
                 
-            elsif (@cabeza == @fin)
+            elsif (@cabeza == @final)
                 
                 yield @cabeza.value
             else
@@ -132,6 +132,6 @@ class Lista
                     var_ini = var_ini.next 
                 end
          end
-     end
+    end
     
 end
