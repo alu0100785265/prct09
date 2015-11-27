@@ -59,7 +59,6 @@ end
   def to_s
     "#{@autores},#{@titulo},#{@fecha},#{@url}"
   end
-  
   end 
 class Periodico < Bbl
   attr_accessor :titular, :categoria
