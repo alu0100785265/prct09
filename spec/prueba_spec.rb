@@ -32,7 +32,7 @@ describe "pruebas" do
               @lista2.insert_empty(6)
               
               @lista3 = Lista.new()
-              @lista3.insert_empty(2)
+              @lista3.insert_empty(3)
             
               @lista4 = Lista.new()
               @lista4.insert_empty(0)
@@ -99,8 +99,9 @@ end
      it "prueba metodo max" do
       expect(@lista5.max).to eq(6)
     end
-    
-    
+    it "prueba metodo max" do
+      expect(@lista5.max).not_to eq(5)
+    end
     it "prueba metodo min" do
       expect(@lista5.min).to eq(1)
     end
@@ -114,7 +115,10 @@ end
       expect(@lista1.sort).to eq([@periodico,@libro1,@libro2,@libro3,])
  
     end
-    
+     it "prueba  metodo collect" do
+      expect(@lista3.map{|i| i*i*i}).to eq([27])
+   
+    end 
   end
 
 
