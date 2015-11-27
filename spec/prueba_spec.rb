@@ -79,9 +79,20 @@ end
 
   describe "Prueba Enumerable" do 
    
+    
+ 
     it "prueba metodo count" do
       expect(@lista3.count).to eq(1)
+    end  
+     it "prueba metodo drop" do
+      expect(@lista5.drop(1)).to eq([6,4,1,5])
+     
     end
+      it "prueba metodo drop" do
+      expect(@lista5.drop(0)).to eq([2,6,4,1,5])
+    end
+     
+    
     
     
   end
