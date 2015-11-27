@@ -50,13 +50,13 @@ end
   describe 'Prueba Comparación' do
 
    it "#El libro1 es igual al libro2" do
-                expect(@libro1 == @libro2).to eq(true)
+                expect(@libro1 <= @libro2).to eq(true)
             end
             it "#El libro1 es igual al libro2" do
                 expect(@libro1 < @libro3).to eq(true)
             end
             it "#El libro1 es igual al libro2" do
-                expect(@articulo == @articulo1).to eq(true)
+                expect(@articulo >= @articulo1).to eq(true)
             end
             it "#El libro1 es igual al libro2" do
                 expect(@articulo1 < @articulo2).to eq(true)
@@ -101,6 +101,9 @@ end
     end
     
     
+    it "prueba metodo min" do
+      expect(@lista5.min).to eq(1)
+    end
     
   end
 
