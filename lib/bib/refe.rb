@@ -9,19 +9,20 @@ class Bbl
   end
   
  
-def <=>(other)
+  def <=>(other)
       
       @autores <=> other.autores 
-      end
+  end
     
-    def ==(other)
+  def ==(other)
       if other.is_a?Bbl
         @autores == other.autores
       else
         false
       end
-    end 
-    end
+  end 
+end
+    
   class Libro < Bbl
     attr_accessor :editorial, :serie, :edicion, :numero_ISBN
     def initialize(autores, titulo, editorial, serie, edicion, publicacion, isbn)
@@ -59,7 +60,7 @@ def <=>(other)
     "#{@autores},#{@titulo},#{@fecha},#{@url}"
   end
   
-end 
+  end 
 class Periodico < Bbl
   attr_accessor :titular, :categoria
   def initialize(autores, titular, fecha, publicacion, categoria)

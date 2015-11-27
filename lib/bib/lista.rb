@@ -1,6 +1,6 @@
 Node = Struct.new(:value, :next , :prev)
 class Lista
-    
+    include Enumerable
     attr_accessor :cabeza,:final
     
     def initialize()
@@ -89,7 +89,49 @@ class Lista
         end
     end
    
-  
+   def insert_empty(nodo)
+       node = Node.new(nodo) 
+       @cabeza = node
+       @final = node
+       
+   end
     
+    def insert_end(nodo)
+        if (!empty())
+           @final.next = Node.new(nodo,nil,@final)
+            @final = @final.next
+        else
+            
+             insert_empty(nodo)
+        end
+    end
+    
+    def insert_inicio(node)
+        if(!empty())
+            @cabeza.prev = Node.new(node,@cabeza)
+            @cabeza = @cabeza.prev
+           
+        else
+           insert_empty(node)
+        end
+           
+    end
+   
+    def each
+         var_ini = @cabeza
+         if (@cabeza == nil and @final == nil)
+                
+                yield nil
+                
+            elsif (@cabeza == @fin)
+                
+                yield @cabeza.value
+            else
+                while(var_ini != nil)
+                    yield var_ini.value  
+                    var_ini = var_ini.next 
+                end
+         end
+     end
     
 end
