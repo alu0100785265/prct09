@@ -1,5 +1,11 @@
-require "bib/version"
 
-module Bib
-  # Your code goes here...
-end
+require "bib/version"
+require "bib/refe"
+require "bib/lista"
+
+ module Bib
+   
+   
+   
+ end
+
