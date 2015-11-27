@@ -91,7 +91,12 @@ end
       it "prueba metodo drop" do
       expect(@lista5.drop(0)).to eq([2,6,4,1,5])
     end
+    
+     it "prueba metodo detect" do
+      expect(@lista4.detect {|i| i == 0}).to eq(0)
+    end
      
+    
     
     
     
