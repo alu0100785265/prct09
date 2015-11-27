@@ -9,7 +9,10 @@ class Bbl
   end
   
  
-
+def <=>(other)
+      
+      @autores <=> other.autores 
+      end
     
     def ==(other)
       if other.is_a?Bbl
