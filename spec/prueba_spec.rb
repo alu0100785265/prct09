@@ -114,6 +114,9 @@ end
       expect(@lista1.sort).to eq([@periodico,@libro1,@libro2,@libro3,])
  
     end
+    it "Testeando el all?: Todos los títulos tienen una longit mayor o igual a 3 caracteres" do
+      expect(@lista1.all? { |word| word[0].length >= 3 }).to eq(true)
+    end
   end
 
 
