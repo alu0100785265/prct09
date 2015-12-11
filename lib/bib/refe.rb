@@ -14,13 +14,7 @@ class Bbl
       @autores <=> other.autores 
   end
     
-  def ==(other)
-      if other.is_a?Bbl
-        @autores == other.autores
-      else
-        false
-      end
-  end 
+  
 end
     
   class Libro < Bbl
@@ -36,7 +30,7 @@ end
       "#{@autores}, #{@numero_ISBN},#{@titulo},#{@editorial},#{@serie},#{@edicion},#{@fecha}"
     end
   end
-  
+  #a
   class Articulo < Bbl
   attr_accessor :numero_ISSN
   
@@ -73,3 +67,10 @@ class Periodico < Bbl
        "#{@autores},#{@titular},#{@fecha},#{@categoria}"
        
     end end
+def ==(other)
+      if other.is_a?Bbl
+        @autores == other.autores
+      else
+        false
+      end
+  end 
