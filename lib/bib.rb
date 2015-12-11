@@ -1,8 +1,8 @@
 
 require "bib/version"
-require "bib/refe"
-require "bib/lista"
-
+require "bib/bibliografia"
+require "bib/linkedList"
+require "bib/apa"
  module Bib
    
    

@@ -1,12 +1,42 @@
-Node = Struct.new(:value, :next , :prev)
+Node = Struct.new(:value, :next, :prev)
+
+
 class Lista
-    include Enumerable
-    attr_accessor :cabeza,:final
     
-    def initialize()
-        @cabeza = nil
-        @final = nil
+    include Enumerable
+    attr_reader :cabeza, :fin
+   
+    def initialize(valor)
+        @cabeza = Node.new(valor,nil,nil)
+        @final = @cabeza
+        
     end
+    
+    #Apuntes de clase: Al metodo each se le puede pasar un bloque de codigo
+    # y ese bloque se va a colocar en cada campo yield y se ejecutará con los parámetros qe están al lado del yield
+    
+    
+
+    
+    
+    #Metodos privados de la clase
+   
+    
+   
+
+    #Metodo privado para crear un nuevo nodo con value = valor y next = nil
+    
+    
+   
+  
+    
+    
+    
+     
+    
+ 
+ 
+ 
     
     def extract_inicio()
         if(empty() != true)
@@ -51,12 +81,12 @@ class Lista
         end
     end
     
-    def insertar_nodo(x)
+    def insert(valor)
         
-        if ((x.instance_of? Node) != true)
-             node = Node.new(x,nil,nil)
+        if ((valor.instance_of? Node) != true)
+             node = Node.new(valor,nil,nil)
         else
-             node = x
+             node = valor
         end
         
         if(empty() == true)
