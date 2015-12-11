@@ -3,7 +3,4 @@ language: ruby
 - 2.2.0
  - 2.2.2
 
-  
-  
-script: bundle exec rspec spec  
-before_install: gem install bundler -v 1.10.6
+ script: bundle exec rspec spec before_install: gem install bundler -v 1.10.6
